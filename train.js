@@ -46,8 +46,8 @@
         dest: dest,
         time: time,
         freq: freq, 
-        next: next, //needs to be in UNIX
-        away: away //needs to be in UNIX
+        next: next, 
+        away: away 
     });
 
   });
