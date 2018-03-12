@@ -32,7 +32,7 @@
               console.log("unix time of first train:", time);
               console.log("regular time:", $("#time-input").val())
               console.log("how frequently it leaves:", freq);                        
-    difference = moment().diff(moment.unix(time), "mins");        //so this is showing up as a UNIX value rather than mins...
+    difference = moment().diff(moment.unix(time), "minutes");        
               console.log("difference in unix (not minutes):", difference);
     remainder = difference % freq;
               console.log("remainder of difference and frequency:", remainder);
