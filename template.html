@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Datbase</title>
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="data.css">
+</head>
+
+<body>
+
+    <div class="container mx-auto">
+
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="jumbotron bg-dark text-white topper col-lg-8 border border-light">
+                <h1>Employee Data Management</h1>
+                <h3>A Comprehensive Directory of Employee Billable Hours</h3>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-lg-8">
+                <!--Current Employees Table-->
+                <div class="card">
+                    <div class="card-header text-white bg-dark">Current Employees</div>
+                    <div class="card-body">
+                        <table class="table table-striped employee">
+                            <thead>
+                                <tr>
+                                    <th>Employee Name</th>
+                                    <th>Role</th>
+                                    <th>Starting Date</th>
+                                    <th>Monthly Rate</th>
+                                    <th>Months Worked</th>
+                                    <th>Total Billed</th>
+                                </tr>
+                            </thead>
+                            <tbody class="newemployees">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <!--Add Employees Table-->
+                <div class="card">
+                    <div class="card-header text-white bg-dark ">Add Employee</div>
+                    <div class="card-body">
+                        <form id="myform">
+                            <div class="form-group">
+                                <label for="name">Employee Name</label>
+                                <input type="text" class="form-control" id="name-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="role">Role</label>
+                                <input type="text" class="form-control" id="role-input">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="date">Start Date (MM/DD/YY)</label>
+                                <input type="text" class="form-control" id="date-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="rate">Monthly Rate</label>
+                                <input type="number" class="form-control" id="rate-input">
+                            </div>
+                            <div class="text-center"><button type="submit" class="btn btn-dark" id="addemployee">Submit</button></div>
+                        </form>
+                    </div>
+                </div>
+
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.js"></script>
+    <script src="dataman.js"></script>
+</body>
+
+</html>
